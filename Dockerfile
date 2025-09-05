@@ -1,10 +1,9 @@
 # ---- Stage 1: Build ----
-FROM maven:3.9.2-jdk-17-slim AS build
+FROM maven:3.9.2-eclipse-temurin-17 AS build
 
 WORKDIR /app
 COPY . .
 
-# Use Maven wrapper if you prefer: ./mvnw clean package -DskipTests
 RUN mvn clean package -DskipTests
 
 # ---- Stage 2: Runtime ----
