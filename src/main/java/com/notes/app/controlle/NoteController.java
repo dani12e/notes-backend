@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/notes")
-@CrossOrigin(origins = "*") // for demo; restrict this in production
+@CrossOrigin(origins = "https://notes-frontend-topaz-nine.vercel.app/") // for demo; restrict this in production
 public class NoteController {
 
     private final NoteService service;
